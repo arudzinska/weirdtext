@@ -25,7 +25,7 @@ RUN mkdir -p $APP_OPTPROJ
 RUN mkdir -p $APP_OPTPROJ/log
 WORKDIR $APP_OPTPROJ
 
-# Copy requirements.txt and code and init data
+# Copy requirements.txt and code
 COPY $APP_REQ/requirements.txt $APP_OPTPROJ/requirements.txt
 COPY $APP_SRC $APP_OPTPROJ
 RUN chmod 740 $APP_OPTPROJ/manage.py
