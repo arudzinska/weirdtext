@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'VERY_SECRET'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['weirdtext.eu-west-1.elasticbeanstalk.com', '.arudzinska.com', 'localhost', '127.0.0.1']
 
