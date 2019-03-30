@@ -25,7 +25,7 @@ SECRET_KEY = '%%q0f5j%j+20u-p*2!ter(%6azz)qd&@^m0h!yzfw*eb)t7m88'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['weirdtext.eu-west-1.elasticbeanstalk.com', '.arudzinska.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
