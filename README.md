@@ -26,14 +26,9 @@ format).
 The app is running at http://127.0.0.1:8000.
 
 #### With Docker
-1) Build Docker image:
+1) Run the bash script:
     ```
-    $ docker build -t weirdtext .
-    ```
-
-2) Run the container:
-    ```
-    $ docker run -d -p 8000:8000 weirdtext
+    $ ./build_and_run.sh
     ```
 
 The app is running at http://127.0.0.1:8000.
