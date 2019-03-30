@@ -9,8 +9,8 @@ format).
 #### With runserver
 1) Create a virtual environment and activate it. For Python3:
     ```
-    $ python3 -m venv /path/to/venv
-    $ source /path/to/venv/bin/activate
+    $ python3 -m venv $PATH_TO_VENV
+    $ source $PATH_TO_VENV/bin/activate
     ```
 
 2) Install modules:
@@ -26,7 +26,7 @@ format).
 The app is running at http://127.0.0.1:8000.
 
 #### With Docker
-1) Run the bash script:
+1) Run the bash script (may require `sudo` permissions):
     ```
     $ ./build_and_run.sh
     ```
