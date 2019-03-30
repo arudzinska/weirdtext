@@ -6,6 +6,12 @@ from .exceptions import NotEncoderFormatError
 
 
 def encode(text):
+    """
+    Takes the input text and returns an encoded version in the WeirdText format.
+
+    :param text: <class 'str'>
+    :return: <class 'str'>
+    """
     t = re.compile(r'(\w+)', re.U)
     output_list = []
     raw_words = []
@@ -31,7 +37,11 @@ def encode(text):
 
 def shuffle_word(word):
     """
-    inp: string
+    Takes the input word and shuffles letters except for the first and the last one. Ensures that the output word is
+    different than the input one.
+
+    :param word: <class 'str'>
+    :return: <class 'str'>
     """
     trimmed = list(word[1:-1])
     shuffled = deepcopy(trimmed)
@@ -44,6 +54,12 @@ def shuffle_word(word):
 
 
 def decode(text):
+    """
+    Takes the input encoded text and returns a decoded one.
+
+    :param text: <class 'str'>
+    :return: <class 'str'>
+    """
     encoded_text, original_words = process_decoder_input(text)
     result = []
 
@@ -64,16 +80,31 @@ def decode(text):
 
 
 def process_decoder_input(text):
+    """
+    Takes the decoder text input and extracts the encoded and the original words parts. Returns lists of words.
+
+    :param text: <class 'str'>
+    :return encoded: <class 'list'>
+    :return original: <class 'list'>
+    """
     text_split = text.split("\\n-weird-\\n")
-    if len(text_split) != 3:
+    if len(text_split) != 3 or text_split[0] != '':
         raise NotEncoderFormatError("String doesn't have a proper Encoder output format")
 
     encoded = text_split[1].split()
     original = text_split[2].split()
+
     return encoded, original
 
 
 def are_anagrams(word, original):
+    """
+    Checks if two input words are anagrams.
+
+    :param word: <class 'str'>
+    :param original: <class 'str'>
+    :return: <class 'bool'>
+    """
     if sorted(word) == sorted(original):
         return True
     return False

@@ -1,6 +1,9 @@
-version: 0.1
+version: 0.2
 
 phases:
+  build:
+    commands:
+      - echo 'Some test & build commands...'
   post_build:
     commands:
-      - echo 'hola'
+      - echo "Build completed"
