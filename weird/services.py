@@ -105,6 +105,4 @@ def are_anagrams(word, original):
     :param original: <class 'str'>
     :return: <class 'bool'>
     """
-    if sorted(word) == sorted(original):
-        return True
-    return False
+    return sorted(word) == sorted(original)
